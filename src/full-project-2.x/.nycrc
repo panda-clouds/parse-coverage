@@ -1,0 +1,12 @@
+{
+  check-coverage: true,
+  no-clean: true,
+  cache-dir: '/parse-server/.nyc_cache',
+  include: [
+    'cloud'
+  ],
+  reporter: [
+    'lcov',
+    'text-summary',
+  ]
+}

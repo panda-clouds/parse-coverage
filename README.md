@@ -1,0 +1,26 @@
+
+Parse Coverage
+=========
+maintained by [PandaClouds.com](https://pandaclouds.com)
+
+A parse-server docker image that collects code coverage information
+
+
+Contributions
+-------------
+
+How to add a new Parse Version:
+
+1. cd /path/to/my/dir
+2. replace x.y.z with the new version `cp spec/3.4.0.spec.js spec/x.y.z.spec.js`
+3. replace x.y.z with the new version `cp -r src/3.4.0 src/x.y.z`
+4. in src/x.y.z replace `FROM parseplatform/parse-server:3.4.0` with `FROM parseplatform/parse-server:x.y.z`
+5. run `npm test`
+6. add your name to 'Contributors' in `README.md`
+
+
+### Contributors
+
+(Add your name)
+
+- [*] [Marc Smith](https://github.com/mrmarcsmith)
