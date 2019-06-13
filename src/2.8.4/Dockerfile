@@ -20,6 +20,4 @@ RUN npm i -g nyc && \
     chown -R node /parse-server/.nyc_output && \
     chown -R node /parse-server/coverage
 
-USER node
-
 ENTRYPOINT ["nyc", "--no-clean=true", "--cache-dir='/parse-server/.nyc_cache'", "--include=cloud", "--reporter=lcov", "--reporter=text-summary", "npm", "start"]
