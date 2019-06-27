@@ -2,9 +2,17 @@ FROM parseplatform/parse-server:3.1.3
 
 USER root
 
+# This allows parse to find the "mockdate" module
+# that we have to install globally
+# because local install fails
+ENV NODE_PATH="/usr/local/lib/node_modules"
+
+
 RUN apk update && \
     apk upgrade && \
     npm i -g nyc && \
+    npm i -g mockdate && \
+    mkdir -p '/parse-server/.nyc_output' && \
     mkdir -p '/parse-server/.nyc_output/processinfo' && \
     mkdir -p '/parse-server/coverage' && \
     mkdir -p '/parse-server/.nyc_cache' && \

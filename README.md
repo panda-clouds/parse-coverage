@@ -18,7 +18,7 @@ How to add a new Parse Version:
 5. `npm test`
 6. `docker login -u pandaclouds`
 6. `docker push pandaclouds/parse-coverage`
-8. `docker images -a | grep "parse-coverage" | awk \'{print $3}\' | xargs docker rmi`
+8. `docker images -a | grep "parse-coverage" | awk '{print $3}' | xargs docker rmi`
 7. add your name to 'Contributors' in `README.md`
 
 
