@@ -16,7 +16,7 @@ describe('full project', () => {
 
 		// process.env.CI_PROD_IMAGE_AND_TAG = 'pandaclouds/parse-coverage:' + version;
 		Parse = await parseRunner.startParseServer();
-	}, 1000 * 60 * 2);
+	}, 1000 * 60 * 5);
 
 	afterAll(async () => {
 		await parseRunner.cleanUp();

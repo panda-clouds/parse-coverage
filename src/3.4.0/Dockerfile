@@ -20,4 +20,4 @@ RUN apk update && \
 
 USER node
 
-ENTRYPOINT ["nyc", "--no-clean=true", "--cache-dir='/parse-server/.nyc_cache'", "--include=cloud", "--reporter=lcov", "--reporter=text-summary", "--reporter=json-summary", "npm", "start"]
+ENTRYPOINT ["nyc", "--no-clean=true", "--cache-dir='/parse-server/.nyc_cache'", "--include=cloud", "--exclude=**/specInjection.js", "--reporter=lcov", "--reporter=text-summary", "--reporter=json-summary", "npm", "start"]
